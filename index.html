@@ -28,10 +28,51 @@
             max-width: 600px;
             line-height: 1.5;
         }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        button {
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-family: 'Roboto Mono', monospace;
+        }
+        button:hover {
+            background: #fff;
+            color: #000;
+        }
     </style>
+    <script>
+        function showEmail() {
+            let captcha = prompt("Digite 'IA' para ver o e-mail:");
+            if (captcha === "IA") {
+                let encodedEmail = "yne.surilvvlrqdo@jpdlo.frp";
+                let decodedEmail = encodedEmail.replace(/[a-z]/g, c => 
+                    String.fromCharCode((c.charCodeAt(0) - 97 - 13 + 26) % 26 + 97)
+                );
+                alert("E-mail: " + decodedEmail);
+            } else {
+                alert("Captcha incorreto!");
+            }
+        }
+    </script>
 </head>
 <body>
     <header>IA Floripa</header>
     <p>A IA Floripa fornece serviços de treinamento e aplicações de ferramentas de Inteligência Artificial para indivíduos e empresas, com ênfase no uso de Modelos de Linguagem Grandes para processamento de conhecimento e informação.</p>
+    
+    <div class="contact">
+        <p>Entre em contato:</p>
+        <p><a href="https://www.instagram.com/ia_floripa" target="_blank">Instagram: @ia_floripa</a></p>
+        <button onclick="showEmail()">Ver e-mail</button>
+    </div>
 </body>
 </html>
